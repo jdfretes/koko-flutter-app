@@ -15,13 +15,20 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: GFAppBar(
-        leading: GFIconButton(
-          icon: const Icon(
-            Icons.location_on_outlined,
-            color: Colors.brown,
+        leading: Container(
+          margin: EdgeInsets.fromLTRB(5, 5, 8, 8),
+          decoration: BoxDecoration(
+            color: Colors.brown[100],
+            borderRadius: BorderRadius.circular(8),
           ),
-          onPressed: () {},
-          type: GFButtonType.transparent,
+          child: GFIconButton(
+            icon: const Icon(
+              Icons.location_on_outlined,
+              color: Colors.brown,
+            ),
+            onPressed: () {},
+            type: GFButtonType.transparent,
+          ),
         ),
         title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
