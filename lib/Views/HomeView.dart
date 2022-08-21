@@ -30,7 +30,10 @@ class _HomeViewState extends State<HomeView> {
                 child: const TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: DefaultStrings.SearchPets
+                    labelText: DefaultStrings.SearchPets,
+                    prefixIcon:
+                        Icon(Icons.search_outlined, color: Colors.brown),
+                    suffixIcon: Icon(Icons.tune, color: Colors.brown),
                   ),
                 ),
               )
