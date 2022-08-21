@@ -30,7 +30,7 @@ class _WelcomeViewState extends State<WelcomeView>
                 image: NetworkImage(imageUtils.getImage()),
                 fit: BoxFit.cover,
               ),
-              color: Colors.redAccent),
+              color: Colors.brown),
         ),
         Container(
           decoration: BoxDecoration(
@@ -88,7 +88,7 @@ class _WelcomeViewState extends State<WelcomeView>
                         );
                       },
                       blockButton: true,
-                      color: Colors.redAccent,
+                      color: Colors.brown,
                       child: const Text(DefaultStrings.GetStarted,
                           style: TextStyle(
                               color: Colors.white,

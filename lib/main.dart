@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'KOKO',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.brown,
       ),
       home: const WelcomeView(),
     );
