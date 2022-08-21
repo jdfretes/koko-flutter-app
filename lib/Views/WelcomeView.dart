@@ -28,7 +28,7 @@ class _WelcomeViewState extends State<WelcomeView> with TickerProviderStateMixin
                 image: NetworkImage(imageUtils.getImage()),
                 fit: BoxFit.cover,
               ),
-              color: Colors.transparent),
+              color: Colors.redAccent),
         ),
         Container(
           decoration: BoxDecoration(
