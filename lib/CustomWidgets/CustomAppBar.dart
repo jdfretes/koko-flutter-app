@@ -35,18 +35,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             style: TextStyle(
                 color: Colors.brown,
                 fontFamily: FontsFamily.OpenSansRegular,
-                fontSize: 16),
+                fontSize: 14),
           ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: const [
-              Text(
-                "Asuncion, Mcal. Lopez",
+              Flexible(
+                  child: Text(
+                "Asunción, Mrcal Lopez 000",
                 style: TextStyle(
-                    color: Colors.brown,
-                    fontFamily: FontsFamily.OpenSansSemiBold,
-                    fontSize: 24),
-              ),
+                  color: Colors.brown,
+                  fontFamily: FontsFamily.OpenSansSemiBold,
+                  fontSize: 16,
+                ),
+              )),
               Icon(
                 Icons.keyboard_arrow_down,
                 color: Colors.brown,
