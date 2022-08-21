@@ -4,14 +4,14 @@ import 'package:koko/Utils/DefaultStrings.dart';
 import 'package:koko/Utils/FontsFamily.dart';
 import 'package:koko/Utils/ImageUtils.dart';
 
-class HomeView extends StatefulWidget {
-  const HomeView({Key? key}) : super(key: key);
+class WelcomeView extends StatefulWidget {
+  const WelcomeView({Key? key}) : super(key: key);
 
   @override
-  State<HomeView> createState() => _HomeViewState();
+  State<WelcomeView> createState() => _WelcomeViewState();
 }
 
-class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
+class _WelcomeViewState extends State<WelcomeView> with TickerProviderStateMixin {
   ImageUtils imageUtils = ImageUtils();
   @override
   void initState() {
