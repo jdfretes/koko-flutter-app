@@ -3,6 +3,7 @@ import 'package:getwidget/components/button/gf_button.dart';
 import 'package:koko/Utils/DefaultStrings.dart';
 import 'package:koko/Utils/FontsFamily.dart';
 import 'package:koko/Utils/ImageUtils.dart';
+import 'package:koko/Views/HomeView.dart';
 
 class WelcomeView extends StatefulWidget {
   const WelcomeView({Key? key}) : super(key: key);
@@ -11,7 +12,8 @@ class WelcomeView extends StatefulWidget {
   State<WelcomeView> createState() => _WelcomeViewState();
 }
 
-class _WelcomeViewState extends State<WelcomeView> with TickerProviderStateMixin {
+class _WelcomeViewState extends State<WelcomeView>
+    with TickerProviderStateMixin {
   ImageUtils imageUtils = ImageUtils();
   @override
   void initState() {
@@ -57,7 +59,7 @@ class _WelcomeViewState extends State<WelcomeView> with TickerProviderStateMixin
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
-                          fontFamily: FontsFamily.OpenSansRegular,
+                          fontFamily: FontsFamily.OpenSansSemiBold,
                           decoration: TextDecoration.none),
                       textAlign: TextAlign.center,
                     ),
@@ -77,14 +79,21 @@ class _WelcomeViewState extends State<WelcomeView> with TickerProviderStateMixin
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 32),
                     child: GFButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const HomeView(),
+                            ),
+                        );
+                      },
                       blockButton: true,
                       color: Colors.redAccent,
                       child: const Text(DefaultStrings.GetStarted,
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 18,
-                              fontFamily: FontsFamily.OpenSansRegular,
+                              fontFamily: FontsFamily.OpenSansSemiBold,
                               decoration: TextDecoration.none)),
                     ),
                   ),
