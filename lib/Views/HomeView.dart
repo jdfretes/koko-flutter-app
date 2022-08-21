@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:koko/CustomWidgets/CustomAppBar.dart';
+import 'package:koko/CustomWidgets/CustomTextField.dart';
 import 'package:koko/Utils/DefaultStrings.dart';
 
 class HomeView extends StatefulWidget {
@@ -27,15 +28,7 @@ class _HomeViewState extends State<HomeView> {
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-                child: const TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: DefaultStrings.SearchPets,
-                    prefixIcon:
-                        Icon(Icons.search_outlined, color: Colors.brown),
-                    suffixIcon: Icon(Icons.tune, color: Colors.brown),
-                  ),
-                ),
+                child: const CustomTextField(),
               )
             ],
           ),
