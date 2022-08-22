@@ -5,4 +5,6 @@ class DefaultStrings {
   static const MyLocation = "Mi Ubicacion";
   static const SearchPets = "busca una mascota";
   static const Categories = "Categorías";
+  static const NearYou = "Cerca de ti";
+  static const SeeAll = "ver todo";
 }

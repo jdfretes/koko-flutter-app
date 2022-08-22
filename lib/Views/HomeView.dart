@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:koko/CustomWidgets/CarouselText.dart';
-import 'package:koko/CustomWidgets/CarouselTitleText.dart';
+import 'package:koko/CustomWidgets/TitleText.dart';
 import 'package:koko/CustomWidgets/CustomAppBar.dart';
 import 'package:koko/CustomWidgets/CustomTextField.dart';
+import 'package:koko/Utils/DefaultStrings.dart';
 import 'package:koko/Utils/FontsFamily.dart';
 
 class HomeView extends StatefulWidget {
@@ -19,6 +20,7 @@ class _HomeViewState extends State<HomeView> {
     "Perros",
     "Gatos",
     "Hamsters",
+    "Peces"
   ];
 
   @override
@@ -37,8 +39,18 @@ class _HomeViewState extends State<HomeView> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const CarouselTitleText(),
-                  CarouselText(categoriesList: categoriesList)
+                  const TitleText(title: DefaultStrings.Categories,),
+                  CarouselText(categoriesList: categoriesList),
+                  Container(
+                    margin: const EdgeInsets.only(top: 32),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                         const TitleText(title: DefaultStrings.NearYou),
+                         Text(DefaultStrings.SeeAll, style: TextStyle(fontFamily: FontsFamily.OpenSansSemiBold, color: Colors.brown.shade600),)
+                      ],
+                    ),
+                  )
                 ],
               ),
             )
