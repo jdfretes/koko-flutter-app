@@ -4,4 +4,5 @@ class DefaultStrings {
   static const GetStarted = "Empezar";
   static const MyLocation = "Mi Ubicacion";
   static const SearchPets = "busca una mascota";
+  static const Categories = "Categorías";
 }
