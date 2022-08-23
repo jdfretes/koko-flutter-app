@@ -8,8 +8,8 @@ import 'package:koko/custom_widgets/custom_card_item.dart';
 import 'package:koko/custom_widgets/custom_text_field.dart';
 import 'package:koko/custom_widgets/title_text.dart';
 
-class HomeTab extends StatelessWidget {
-  const HomeTab({
+class HomeTabView extends StatefulWidget {
+  const HomeTabView({
     Key? key,
     required this.categoriesList,
     required this.imageUtils,
@@ -17,6 +17,22 @@ class HomeTab extends StatelessWidget {
 
   final List<String> categoriesList;
   final ImageUtils imageUtils;
+
+  @override
+  State<HomeTabView> createState() => _HomeTabViewState();
+}
+
+class _HomeTabViewState extends State<HomeTabView> {
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +50,7 @@ class HomeTab extends StatelessWidget {
               const TitleText(
                 title: DefaultStrings.categories,
               ),
-              CarouselText(categoriesList: categoriesList),
+              CarouselText(categoriesList: widget.categoriesList),
               Container(
                 margin: const EdgeInsets.only(top: 32),
                 child: Row(
@@ -56,7 +72,7 @@ class HomeTab extends StatelessWidget {
         GFItemsCarousel(
           itemHeight: 350,
           rowCount: 2,
-          children: imageUtils.images.map(
+          children: widget.imageUtils.images.map(
             (url) {
               return CustomCardItem(url: url);
             },

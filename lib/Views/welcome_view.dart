@@ -3,7 +3,7 @@ import 'package:getwidget/components/button/gf_button.dart';
 import 'package:koko/Utils/default_strings.dart';
 import 'package:koko/Utils/fonts_family.dart';
 import 'package:koko/Utils/image_utils.dart';
-import 'package:koko/Views/custom_tab_bar_view.dart';
+import 'package:koko/views/home/custom_tab_bar_view.dart';
 
 class WelcomeView extends StatefulWidget {
   const WelcomeView({Key? key}) : super(key: key);

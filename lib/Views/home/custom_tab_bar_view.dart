@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:koko/Utils/image_utils.dart';
-import 'package:koko/Views/home_tab.dart';
 import 'package:koko/custom_widgets/custom_app_bar.dart';
+import 'package:koko/views/home/tabs/favorite_tab_view.dart';
+import 'package:koko/views/home/tabs/home_tab_view.dart';
+import 'package:koko/views/home/tabs/profile_tab_view.dart';
 
 class CustomTabBarView extends StatefulWidget {
   const CustomTabBarView({Key? key}) : super(key: key);
@@ -39,13 +41,13 @@ class _CustomTabBarViewState extends State<CustomTabBarView> with TickerProvider
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.brown[50],
-      appBar: const CustomAppBar(),
+      appBar: tabController.index == 0 ? const CustomAppBar() : null,
       body: GFTabBarView(
         controller: tabController,
         children: [
-          HomeTab(categoriesList: categoriesList, imageUtils: imageUtils),
-          HomeTab(categoriesList: categoriesList, imageUtils: imageUtils),
-          HomeTab(categoriesList: categoriesList, imageUtils: imageUtils)
+          HomeTabView(categoriesList: categoriesList, imageUtils: imageUtils),
+          const FavoriteTabView(),
+          const ProfileTabView()
         ],
       ),
       bottomNavigationBar: GFTabBar(
