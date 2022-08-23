@@ -13,7 +13,8 @@ class CustomTabBarView extends StatefulWidget {
   State<CustomTabBarView> createState() => _CustomTabBarViewState();
 }
 
-class _CustomTabBarViewState extends State<CustomTabBarView> with TickerProviderStateMixin {
+class _CustomTabBarViewState extends State<CustomTabBarView>
+    with TickerProviderStateMixin {
   ImageUtils imageUtils = ImageUtils();
   final List<String> categoriesList = [
     "Todos",
@@ -22,8 +23,14 @@ class _CustomTabBarViewState extends State<CustomTabBarView> with TickerProvider
     "Hamsters",
     "Peces"
   ];
-
   late TabController tabController;
+  bool showAppBar = true;
+
+  void onShowHomeTab(bool show) {
+    setState(() {
+      showAppBar = show;
+    });
+  }
 
   @override
   void initState() {
@@ -41,11 +48,15 @@ class _CustomTabBarViewState extends State<CustomTabBarView> with TickerProvider
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.brown[50],
-      appBar: tabController.index == 0 ? const CustomAppBar() : null,
+      appBar: showAppBar ? const CustomAppBar() : null,
       body: GFTabBarView(
         controller: tabController,
         children: [
-          HomeTabView(categoriesList: categoriesList, imageUtils: imageUtils),
+          HomeTabView(
+            categoriesList: categoriesList,
+            imageUtils: imageUtils,
+            onShowHomeTab: onShowHomeTab,
+          ),
           const FavoriteTabView(),
           const ProfileTabView()
         ],
@@ -78,5 +89,3 @@ class _CustomTabBarViewState extends State<CustomTabBarView> with TickerProvider
     );
   }
 }
-
-
