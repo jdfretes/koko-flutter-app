@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:koko/Utils/FontsFamily.dart';
+import 'package:koko/Utils/fonts_family.dart';
 
 class TitleText extends StatelessWidget {
   const TitleText({
@@ -14,7 +14,7 @@ class TitleText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(title,
         style: TextStyle(
-            fontFamily: FontsFamily.OpenSansBold,
+            fontFamily: FontsFamily.openSansBold,
             fontSize: 18,
             color: Colors.brown.shade800));
   }

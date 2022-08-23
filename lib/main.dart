@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:koko/Views/WelcomeView.dart';
+import 'package:koko/Views/welcome_view.dart';
 
 void main() {
   runApp(const MyApp());

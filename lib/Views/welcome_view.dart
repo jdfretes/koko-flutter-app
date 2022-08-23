@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/button/gf_button.dart';
-import 'package:koko/Utils/DefaultStrings.dart';
-import 'package:koko/Utils/FontsFamily.dart';
-import 'package:koko/Utils/ImageUtils.dart';
-import 'package:koko/Views/HomeView.dart';
+import 'package:koko/Utils/default_strings.dart';
+import 'package:koko/Utils/fonts_family.dart';
+import 'package:koko/Utils/image_utils.dart';
+import 'package:koko/Views/home_view.dart';
 
 class WelcomeView extends StatefulWidget {
   const WelcomeView({Key? key}) : super(key: key);
@@ -59,7 +59,7 @@ class _WelcomeViewState extends State<WelcomeView>
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
-                          fontFamily: FontsFamily.OpenSansSemiBold,
+                          fontFamily: FontsFamily.openSansSemiBold,
                           decoration: TextDecoration.none),
                       textAlign: TextAlign.center,
                     ),
@@ -71,7 +71,7 @@ class _WelcomeViewState extends State<WelcomeView>
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
-                          fontFamily: FontsFamily.OpenSansLight,
+                          fontFamily: FontsFamily.openSansLight,
                           decoration: TextDecoration.none),
                       textAlign: TextAlign.center,
                     ),
@@ -89,11 +89,11 @@ class _WelcomeViewState extends State<WelcomeView>
                       },
                       blockButton: true,
                       color: Colors.brown,
-                      child: const Text(DefaultStrings.GetStarted,
+                      child: const Text(DefaultStrings.getStarted,
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 18,
-                              fontFamily: FontsFamily.OpenSansSemiBold,
+                              fontFamily: FontsFamily.openSansSemiBold,
                               decoration: TextDecoration.none)),
                     ),
                   ),

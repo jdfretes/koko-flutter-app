@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
-import 'package:koko/Utils/DefaultStrings.dart';
-import 'package:koko/Utils/FontsFamily.dart';
+import 'package:koko/Utils/default_strings.dart';
+import 'package:koko/Utils/fonts_family.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
@@ -33,10 +33,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              DefaultStrings.MyLocation,
+              DefaultStrings.myLocation,
               style: TextStyle(
                   color: Colors.brown,
-                  fontFamily: FontsFamily.OpenSansRegular,
+                  fontFamily: FontsFamily.openSansRegular,
                   fontSize: 14),
             ),
             Row(
@@ -47,7 +47,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   "Asunción, Mrcal Lopez 000",
                   style: TextStyle(
                     color: Colors.brown,
-                    fontFamily: FontsFamily.OpenSansSemiBold,
+                    fontFamily: FontsFamily.openSansSemiBold,
                     fontSize: 16,
                   ),
                 )),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
-import 'package:koko/Utils/FontsFamily.dart';
+import 'package:koko/Utils/fonts_family.dart';
 
 class CarouselText extends StatelessWidget {
   const CarouselText({
@@ -26,7 +26,7 @@ class CarouselText extends StatelessWidget {
               shape: GFButtonShape.pills,
               color: Colors.brown.shade400,
               textStyle: TextStyle(
-                  fontFamily: FontsFamily.OpenSansLight,
+                  fontFamily: FontsFamily.openSansLight,
                   fontSize: 18,
                   color: text == categoriesList.first ? Colors.white : Colors.brown.shade800
               ),

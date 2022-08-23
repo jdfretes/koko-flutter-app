@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:koko/Utils/DefaultStrings.dart';
+import 'package:koko/Utils/default_strings.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -11,7 +11,7 @@ class CustomTextField extends StatelessWidget {
     return const TextField(
       decoration: InputDecoration(
         border: OutlineInputBorder(),
-        labelText: DefaultStrings.SearchPets,
+        labelText: DefaultStrings.searchPets,
         prefixIcon: Icon(Icons.search_outlined, color: Colors.brown),
         suffixIcon: Icon(Icons.tune, color: Colors.brown),
       ),

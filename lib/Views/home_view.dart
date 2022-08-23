@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/scheduler/ticker.dart';
 import 'package:getwidget/getwidget.dart';
-import 'package:koko/CustomWidgets/CarouselText.dart';
-import 'package:koko/CustomWidgets/TitleText.dart';
-import 'package:koko/CustomWidgets/CustomAppBar.dart';
-import 'package:koko/CustomWidgets/CustomTextField.dart';
-import 'package:koko/Utils/DefaultStrings.dart';
-import 'package:koko/Utils/FontsFamily.dart';
-import 'package:koko/Utils/ImageUtils.dart';
+import 'package:koko/CustomWidgets/carousel_text.dart';
+import 'package:koko/CustomWidgets/title_text.dart';
+import 'package:koko/CustomWidgets/custom_app_bar.dart';
+import 'package:koko/CustomWidgets/custom_text_field.dart';
+import 'package:koko/Utils/default_strings.dart';
+import 'package:koko/Utils/fonts_family.dart';
+import 'package:koko/Utils/image_utils.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -57,7 +56,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const TitleText(
-                  title: DefaultStrings.Categories,
+                  title: DefaultStrings.categories,
                 ),
                 CarouselText(categoriesList: categoriesList),
                 Container(
@@ -65,11 +64,11 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const TitleText(title: DefaultStrings.NearYou),
+                      const TitleText(title: DefaultStrings.nearYou),
                       Text(
-                        DefaultStrings.SeeAll,
+                        DefaultStrings.seeAll,
                         style: TextStyle(
-                            fontFamily: FontsFamily.OpenSansSemiBold,
+                            fontFamily: FontsFamily.openSansSemiBold,
                             color: Colors.brown.shade600),
                       )
                     ],
@@ -119,14 +118,14 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                                     "Macho",
                                     style: TextStyle(
                                         fontFamily:
-                                            FontsFamily.OpenSansSemiBold,
+                                            FontsFamily.openSansSemiBold,
                                         color: Colors.brown.shade400),
                                   ),
                                   Text(
                                     "1a 3m",
                                     style: TextStyle(
                                         fontFamily:
-                                            FontsFamily.OpenSansSemiBold,
+                                            FontsFamily.openSansSemiBold,
                                         color: Colors.brown.shade400),
                                   )
                                 ],
@@ -153,7 +152,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                                           color: Colors.white,
                                           fontSize: 18,
                                           fontFamily:
-                                              FontsFamily.OpenSansSemiBold,
+                                              FontsFamily.openSansSemiBold,
                                           decoration: TextDecoration.none)),
                                 )
                               ],
