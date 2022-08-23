@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
-import 'package:koko/CustomWidgets/title_text.dart';
 import 'package:koko/Utils/fonts_family.dart';
+import 'package:koko/custom_widgets/title_text.dart';
 
 class CustomCardItem extends StatelessWidget {
   const CustomCardItem({

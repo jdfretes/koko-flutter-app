@@ -3,7 +3,7 @@ import 'package:getwidget/components/button/gf_button.dart';
 import 'package:koko/Utils/default_strings.dart';
 import 'package:koko/Utils/fonts_family.dart';
 import 'package:koko/Utils/image_utils.dart';
-import 'package:koko/Views/home_view.dart';
+import 'package:koko/Views/custom_tab_bar_view.dart';
 
 class WelcomeView extends StatefulWidget {
   const WelcomeView({Key? key}) : super(key: key);
@@ -83,7 +83,7 @@ class _WelcomeViewState extends State<WelcomeView>
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const HomeView(),
+                                builder: (context) => const CustomTabBarView(),
                             ),
                         );
                       },
