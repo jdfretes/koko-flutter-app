@@ -5,8 +5,9 @@ import 'package:koko/utils/image_utils.dart';
 class FavoriteTabView extends StatefulWidget {
   const FavoriteTabView({
     Key? key,
+    required this.onShowHomeTab,
   }) : super(key: key);
-
+  final void Function(bool) onShowHomeTab;
   @override
   State<FavoriteTabView> createState() => _FavoriteTabViewState();
 }
@@ -15,6 +16,9 @@ class _FavoriteTabViewState extends State<FavoriteTabView> {
   @override
   void initState() {
     super.initState();
+    Future.delayed(Duration.zero, () async {
+      widget.onShowHomeTab(false);
+    });
   }
 
   @override
@@ -25,12 +29,20 @@ class _FavoriteTabViewState extends State<FavoriteTabView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.brown[50],
       appBar: AppBar(
-        title: const Text("Favoritos"),
+        title: const Text(
+          "Favoritos",
+          style: TextStyle(
+            color: Colors.brown
+          ),
+        ),
         automaticallyImplyLeading: false,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
       ),
       body: Container(
-        margin: const EdgeInsets.fromLTRB(0, 16, 16, 16),
+        margin: const EdgeInsets.fromLTRB(0, 0, 16, 16),
         child: GridView.count(
           mainAxisSpacing: 8,
           crossAxisCount: 2,

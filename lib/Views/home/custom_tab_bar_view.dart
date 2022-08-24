@@ -46,45 +46,49 @@ class _CustomTabBarViewState extends State<CustomTabBarView>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.brown[50],
-      appBar: showAppBar ? const CustomAppBar() : null,
-      body: GFTabBarView(
-        controller: tabController,
-        children: [
-          HomeTabView(
-            categoriesList: categoriesList,
-            imageUtils: imageUtils,
-            onShowHomeTab: onShowHomeTab,
-          ),
-          const FavoriteTabView(),
-          const ProfileTabView()
-        ],
-      ),
-      bottomNavigationBar: GFTabBar(
-        tabBarColor: Colors.black,
-        length: 3,
-        controller: tabController,
-        tabs: const [
-          Tab(
-            icon: Icon(Icons.home),
-            child: Text(
-              "Inicio",
+    return Container(
+      color: Colors.brown[50],
+      child: SafeArea(
+          child: Scaffold(
+            backgroundColor: Colors.brown[50],
+            appBar: showAppBar ? const CustomAppBar() : null,
+            body: GFTabBarView(
+              controller: tabController,
+              children: [
+                HomeTabView(
+                    categoriesList: categoriesList,
+                    imageUtils: imageUtils,
+                    onShowHomeTab: onShowHomeTab),
+                FavoriteTabView(onShowHomeTab: onShowHomeTab),
+                ProfileTabView(onShowHomeTab: onShowHomeTab)
+              ],
+            ),
+            bottomNavigationBar: GFTabBar(
+              tabBarColor: Colors.black,
+              length: 3,
+              controller: tabController,
+              tabs: const [
+                Tab(
+                  icon: Icon(Icons.home),
+                  child: Text(
+                    "Inicio",
+                  ),
+                ),
+                Tab(
+                  icon: Icon(Icons.favorite_outline),
+                  child: Text(
+                    "Favoritos",
+                  ),
+                ),
+                Tab(
+                  icon: Icon(Icons.person),
+                  child: Text(
+                    "Perfil",
+                  ),
+                ),
+              ],
             ),
           ),
-          Tab(
-            icon: Icon(Icons.favorite_outline),
-            child: Text(
-              "Favoritos",
-            ),
-          ),
-          Tab(
-            icon: Icon(Icons.person),
-            child: Text(
-              "Perfil",
-            ),
-          ),
-        ],
       ),
     );
   }

@@ -36,9 +36,6 @@ class _HomeTabViewState extends State<HomeTabView> {
   @override
   void dispose() {
     super.dispose();
-    Future.delayed(Duration.zero, () async {
-      widget.onShowHomeTab(false);
-    });
   }
 
   @override
