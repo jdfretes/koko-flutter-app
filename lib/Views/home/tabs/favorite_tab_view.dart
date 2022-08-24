@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:koko/custom_widgets/custom_app_bar.dart';
 import 'package:koko/custom_widgets/custom_card_item.dart';
 import 'package:koko/utils/image_utils.dart';
 

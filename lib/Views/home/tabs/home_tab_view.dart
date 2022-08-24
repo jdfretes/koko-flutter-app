@@ -43,49 +43,75 @@ class _HomeTabViewState extends State<HomeTabView> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-          child: const CustomTextField(),
-        ),
-        Container(
-          padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const TitleText(
-                title: DefaultStrings.categories,
-              ),
-              CarouselText(categoriesList: widget.categoriesList),
-              Container(
-                margin: const EdgeInsets.only(top: 32),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const TitleText(title: DefaultStrings.nearYou),
-                    Text(
-                      DefaultStrings.seeAll,
-                      style: TextStyle(
-                          fontFamily: FontsFamily.openSansSemiBold,
-                          color: Colors.brown.shade600),
-                    )
-                  ],
-                ),
-              )
-            ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+            child: const CustomTextField(),
           ),
-        ),
-        GFItemsCarousel(
-          itemHeight: 350,
-          rowCount: 2,
-          children: widget.imageUtils.images.map(
-            (url) {
-              return CustomCardItem(url: url);
-            },
-          ).toList(),
-        ),
-      ],
+          Container(
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const TitleText(
+                  title: DefaultStrings.categories,
+                ),
+                CarouselText(categoriesList: widget.categoriesList),
+                Container(
+                  margin: const EdgeInsets.only(top: 32),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const TitleText(title: DefaultStrings.nearYou),
+                      Text(
+                        DefaultStrings.seeAll,
+                        style: TextStyle(
+                            fontFamily: FontsFamily.openSansSemiBold,
+                            color: Colors.brown.shade600),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+          GFItemsCarousel(
+            itemHeight: 350,
+            rowCount: 2,
+            children: widget.imageUtils.images.map(
+              (url) {
+                return CustomCardItem(url: url);
+              },
+            ).toList(),
+          ),
+          Container(
+            margin: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const TitleText(title: DefaultStrings.nearYou),
+                Text(
+                  DefaultStrings.seeAll,
+                  style: TextStyle(
+                      fontFamily: FontsFamily.openSansSemiBold,
+                      color: Colors.brown.shade600),
+                )
+              ],
+            ),
+          ),
+          GFItemsCarousel(
+            itemHeight: 350,
+            rowCount: 2,
+            children: widget.imageUtils.images.map(
+              (url) {
+                return CustomCardItem(url: url);
+              },
+            ).toList(),
+          ),
+        ],
+      ),
     );
   }
 }

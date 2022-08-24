@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:koko/custom_widgets/custom_card_item.dart';
 import 'package:koko/utils/image_utils.dart';

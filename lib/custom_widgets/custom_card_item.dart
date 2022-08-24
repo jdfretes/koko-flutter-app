@@ -15,17 +15,15 @@ class CustomCardItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(16, 0, 0, 0),
       child: ClipRRect(
-          borderRadius:
-              const BorderRadius.all(Radius.circular(5.0)),
+          borderRadius: const BorderRadius.all(Radius.circular(5.0)),
           child: Container(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
             color: Colors.brown.shade100,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ClipRRect(
-                  borderRadius:
-                      const BorderRadius.all(Radius.circular(5.0)),
+                  borderRadius: const BorderRadius.all(Radius.circular(5.0)),
                   child: SizedBox(
                     height: 200,
                     width: 200,
@@ -42,21 +40,18 @@ class CustomCardItem extends StatelessWidget {
                 Container(
                   margin: const EdgeInsets.only(top: 16),
                   child: Row(
-                    mainAxisAlignment:
-                        MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         "Macho",
                         style: TextStyle(
-                            fontFamily:
-                                FontsFamily.openSansSemiBold,
+                            fontFamily: FontsFamily.openSansSemiBold,
                             color: Colors.brown.shade400),
                       ),
                       Text(
                         "1a 3m",
                         style: TextStyle(
-                            fontFamily:
-                                FontsFamily.openSansSemiBold,
+                            fontFamily: FontsFamily.openSansSemiBold,
                             color: Colors.brown.shade400),
                       )
                     ],
@@ -82,8 +77,7 @@ class CustomCardItem extends StatelessWidget {
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 18,
-                              fontFamily:
-                                  FontsFamily.openSansSemiBold,
+                              fontFamily: FontsFamily.openSansSemiBold,
                               decoration: TextDecoration.none)),
                     )
                   ],
