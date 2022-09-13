@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:koko/custom_widgets/custom_card_item.dart';
 import 'package:koko/utils/image_utils.dart';
 
@@ -58,7 +59,22 @@ class _ProfileTabViewState extends State<ProfileTabView> {
                 ),
               ),
             ),
-          )
+          ),
+          const GFListTile(
+              titleText: 'Title',
+              subTitleText:
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing',
+              icon: Icon(Icons.edit)),
+          const GFListTile(
+              titleText: 'Title',
+              subTitleText:
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing',
+              icon: Icon(Icons.edit)),
+          const GFListTile(
+              titleText: 'Title',
+              subTitleText:
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing',
+              icon: Icon(Icons.edit)),
         ],
       ),
     );

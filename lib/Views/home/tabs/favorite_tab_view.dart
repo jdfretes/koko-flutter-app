@@ -33,9 +33,7 @@ class _FavoriteTabViewState extends State<FavoriteTabView> {
       appBar: AppBar(
         title: const Text(
           "Favoritos",
-          style: TextStyle(
-            color: Colors.brown
-          ),
+          style: TextStyle(color: Colors.brown),
         ),
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
@@ -48,7 +46,7 @@ class _FavoriteTabViewState extends State<FavoriteTabView> {
           crossAxisCount: 2,
           childAspectRatio: (1 / 1.89),
           shrinkWrap: true,
-          children: List.generate(100, (index) {
+          children: List.generate(10, (index) {
             return CustomCardItem(url: ImageUtils().getImage());
           }),
         ),

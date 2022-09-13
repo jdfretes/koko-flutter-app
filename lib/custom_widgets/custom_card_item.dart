@@ -34,11 +34,11 @@ class CustomCardItem extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 16),
+                  margin: const EdgeInsets.only(top: 8),
                   child: const TitleText(title: "Nombre"),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 16),
+                  margin: const EdgeInsets.only(top: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
