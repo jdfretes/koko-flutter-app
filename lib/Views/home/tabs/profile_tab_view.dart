@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:koko/custom_widgets/custom_card_item.dart';
 import 'package:koko/utils/image_utils.dart';
 
+import '../../../dotted.dart';
+
 class ProfileTabView extends StatefulWidget {
   const ProfileTabView({Key? key, required this.onShowHomeTab})
       : super(key: key);
@@ -45,13 +47,15 @@ class _ProfileTabViewState extends State<ProfileTabView> {
         children: [
           Container(
             alignment: Alignment.center,
-            child: CircleAvatar(
-              radius: 55,
-              backgroundColor: Colors.amber,
-              child: CircleAvatar(
-                radius: 50,
-                backgroundImage: NetworkImage(
-                    "https://images.unsplash.com/photo-1661950570442-ee7e49c25cba"),
+            child: DashedCircle(
+              color: Colors.blueAccent,
+              child: const Padding(
+                padding: EdgeInsets.all(3),
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage: NetworkImage(
+                      "https://images.unsplash.com/photo-1661950570442-ee7e49c25cba"),
+                ),
               ),
             ),
           )
