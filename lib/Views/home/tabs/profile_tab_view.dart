@@ -3,10 +3,8 @@ import 'package:koko/custom_widgets/custom_card_item.dart';
 import 'package:koko/utils/image_utils.dart';
 
 class ProfileTabView extends StatefulWidget {
-  const ProfileTabView({
-    Key? key,
-    required this.onShowHomeTab
-  }) : super(key: key);
+  const ProfileTabView({Key? key, required this.onShowHomeTab})
+      : super(key: key);
   final void Function(bool) onShowHomeTab;
 
   @override
@@ -34,25 +32,30 @@ class _ProfileTabViewState extends State<ProfileTabView> {
       appBar: AppBar(
         title: const Text(
           "Perfil",
-          style: TextStyle(
-              color: Colors.brown
-          ),
+          style: TextStyle(color: Colors.brown),
         ),
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: Container(
-        margin: const EdgeInsets.fromLTRB(0, 0, 16, 16),
-        child: GridView.count(
-          mainAxisSpacing: 8,
-          crossAxisCount: 2,
-          childAspectRatio: (1 / 1.89),
-          shrinkWrap: true,
-          children: List.generate(100, (index) {
-            return CustomCardItem(url: ImageUtils().getImage());
-          }),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Container(
+            alignment: Alignment.center,
+            child: CircleAvatar(
+              radius: 55,
+              backgroundColor: Colors.amber,
+              child: CircleAvatar(
+                radius: 50,
+                backgroundImage: NetworkImage(
+                    "https://images.unsplash.com/photo-1661950570442-ee7e49c25cba"),
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
