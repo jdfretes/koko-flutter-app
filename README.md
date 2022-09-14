@@ -1,6 +1,6 @@
 # koko
 
-adopta perros y gatos
+App para busqueda de adopción de mascotas, desarrollado en Flutter
 
 <div>
 <img src="https://user-images.githubusercontent.com/19434188/190235305-49dbacb9-1582-44c3-a630-dcb0df1ff46c.jpg" alt="1" style="width: 200px;"/>
