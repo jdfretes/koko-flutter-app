@@ -3,6 +3,7 @@ import 'package:getwidget/getwidget.dart';
 import 'package:koko/custom_widgets/custom_card_item.dart';
 import 'package:koko/utils/image_utils.dart';
 
+import '../../../Utils/fonts_family.dart';
 import '../../../dotted.dart';
 
 class ProfileTabView extends StatefulWidget {
@@ -49,7 +50,7 @@ class _ProfileTabViewState extends State<ProfileTabView> {
           Container(
             alignment: Alignment.center,
             child: DashedCircle(
-              color: Colors.blueAccent,
+              color: Colors.brown.shade500,
               child: const Padding(
                 padding: EdgeInsets.all(3),
                 child: CircleAvatar(
@@ -60,21 +61,89 @@ class _ProfileTabViewState extends State<ProfileTabView> {
               ),
             ),
           ),
-          const GFListTile(
-              titleText: 'Title',
-              subTitleText:
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing',
-              icon: Icon(Icons.edit)),
-          const GFListTile(
-              titleText: 'Title',
-              subTitleText:
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing',
-              icon: Icon(Icons.edit)),
-          const GFListTile(
-              titleText: 'Title',
-              subTitleText:
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing',
-              icon: Icon(Icons.edit)),
+          Container(
+            margin: const EdgeInsets.fromLTRB(0, 16, 0, 16),
+            child: Column(
+              children: [
+                Text(
+                  "Sara Miers",
+                  style: TextStyle(
+                      fontFamily: FontsFamily.openSansBold,
+                      color: Colors.brown.shade900),
+                ),
+                Text(
+                  "@saram01",
+                  style: TextStyle(
+                      fontFamily: FontsFamily.openSansLight,
+                      color: Colors.brown.shade900),
+                )
+              ],
+            ),
+          ),
+          GFListTile(
+            title: Text(
+              "Contactar",
+              style: TextStyle(
+                  fontFamily: FontsFamily.openSansSemiBold,
+                  color: Colors.brown.shade900),
+            ),
+            avatar: const Icon(Icons.add_ic_call_outlined),
+          ),
+          const Divider(
+            height: 1,
+            thickness: 0.1,
+            indent: 24,
+            endIndent: 24,
+            color: Colors.black,
+          ),
+          GFListTile(
+            title: Text(
+              "Política de privacidad",
+              style: TextStyle(
+                  fontFamily: FontsFamily.openSansSemiBold,
+                  color: Colors.brown.shade900),
+            ),
+            avatar: const Icon(Icons.policy_outlined),
+          ),
+          const Divider(
+            height: 1,
+            thickness: 0.1,
+            indent: 24,
+            endIndent: 24,
+            color: Colors.black,
+          ),
+          GFListTile(
+            title: Text(
+              "Términos y Condiciones",
+              style: TextStyle(
+                  fontFamily: FontsFamily.openSansSemiBold,
+                  color: Colors.brown.shade900),
+            ),
+            avatar: const Icon(Icons.description_outlined),
+          ),
+          const Divider(
+            height: 1,
+            thickness: 0.1,
+            indent: 24,
+            endIndent: 24,
+            color: Colors.black,
+          ),
+          GFListTile(
+            title: Text(
+              "Salir",
+              style: TextStyle(
+                  fontFamily: FontsFamily.openSansSemiBold,
+                  color: Colors.brown.shade900),
+            ),
+            avatar: const Icon(Icons.logout_outlined),
+          ),
+          const Divider(
+            height: 1,
+            thickness: 0.1,
+            indent: 24,
+            endIndent: 24,
+            color: Colors.black,
+          ),
         ],
       ),
     );
